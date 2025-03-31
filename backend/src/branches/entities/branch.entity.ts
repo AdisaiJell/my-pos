@@ -1,0 +1,31 @@
+import { Receipt } from 'src/receipts/entities/receipt.entity';
+import { User } from 'src/users/entities/user.entity';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+
+@Entity()
+export class Branch {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+
+  @CreateDateColumn()
+  created: Date;
+
+  @UpdateDateColumn()
+  updated: Date;
+
+  @OneToMany(() => User, (user) => user.branch)
+  users: User[];
+
+  @OneToMany(() => Receipt, (receipt) => receipt.branch)
+  receipts: Receipt[];
+}
