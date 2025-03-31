@@ -35,14 +35,9 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 #Database file
-*.sqlite
+# *.sqlite
 
-public/images/*
-!public/images/rawMaterial/noimage.jpg
-!public/images/users/noimage.jpg
-!public/images/users/user1.jpg
-!public/images/users/user2.jpg
-!public/images/users/user3.jpg
-!public/images/users/user4.jpg
-!public/images/users/user5.jpg
+public/images/products/*
+public/images/users/*
 !public/images/products/noimage.jpg
+!public/images/users/noimage.jpg
